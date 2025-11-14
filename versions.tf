@@ -11,11 +11,12 @@ terraform {
 }
 
 # Configure the AWS Provider
+###SSO Credentials need to be updated####
 
 provider "aws" {
   region = var.region
-  shared_config_files = ["/Users/jgervickas/.aws/config"]
-  shared_credentials_files = ["/Users/jgervickas/.aws/credentials"]
-  profile = "jg-access"
+  shared_config_files = ["/Users/*****/.aws/config"]
+  shared_credentials_files = ["/Users/******/.aws/credentials"]
+  profile = "********"
     
 }

@@ -1,4 +1,5 @@
-# variables.tf
+# variables.tf 
+#####Update the variables as needed####
 variable "region" {
   description = "AWS region to deploy resources in"
   type        = string
@@ -8,7 +9,7 @@ variable "region" {
 variable "project_name" {
   description = "A prefix for resource naming"
   type        = string
-  default     = "JgerZT"
+  default     = ""
 }
 
 variable "vpc1_cidr" {
@@ -44,8 +45,8 @@ variable "tags" {
   type        = map(string)
   default = {
     Environment = "Dev"
-    Project     = "ZTCloudInterVPC"
-    Owner       = "jgervickas@zscaler.com"
+    Project     = ""
+    Owner       = ""
   }
 }
 
@@ -62,13 +63,13 @@ variable "instance_type" {
 variable "ami_id" {
   description = "AMI ID for the EC2 instances (Amazon Linux 2 usually)"
   type        = string
-  default     = "ami-0cae6d6fe6048ca2c" # User provided AMI ID
+  default     = "ami-0cae6d6fe6048ca2c" # User provided AMI ID - THIS IS Amazon Linux in US-EAST1
 }
 
 variable "key_pair_name" {
   description = "The name of the SSH key pair to use for EC2 instances"
   type        = string
-  default     = "jg-us-east-1-KP" # You should customize this
+  default     = "" # You should customize this
 }
 
 variable "ssh_ingress_cidr" {
